@@ -1,33 +1,43 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using Training8.PageObjects;
+using Training8.Utilities;
 
 namespace Training8.StepDefinitions
 {
     [Binding]
-    public class LoginSteps
+    public class LoginSteps : Hooks
     {
+        LoginPage loginPage;
+
+
+        public LoginSteps()
+        {
+            loginPage = new LoginPage();
+        }
+
         [When(@"I click on Login link")]
         public void WhenClickOnLoginLink()
         {
-           ScenarioContext.Current.Pending();
+            loginPage.ClickLogin();
         }
         
         [When(@"I enter username")]
         public void WhenIEnterUsername()
         {
-            ScenarioContext.Current.Pending();
+            loginPage.TypeEmail();
         }
         
         [When(@"I enter password")]
         public void WhenIEnterPassword()
         {
-            ScenarioContext.Current.Pending();
+            loginPage.TypePassword();
         }
         
         [When(@"I click on login button")]
         public void WhenIClickOnLoginButton()
         {
-            ScenarioContext.Current.Pending();
+            loginPage.ClickSignin();
         }
         
         [Then(@"I am logged in to the site")]

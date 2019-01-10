@@ -10,21 +10,21 @@ using TechTalk.SpecFlow;
 namespace Training8.Utilities
 {
     [Binding]
-    public sealed class Hooks
+    public class Hooks
     {
-        ChromeDriver driver;
-        FirefoxDriver driverFirefox;
-        InternetExplorerDriver driverIE;
+        public ChromeDriver driver;
+        public FirefoxDriver driverFirefox;
+        public InternetExplorerDriver driverIE;
 
         [BeforeScenario]
         public void BeforeScenario()
         {
             //ChromeDriver driver = new ChromeDriver();
-            //driver = new ChromeDriver();
+            driver = new ChromeDriver();
 
             //driverFirefox = new FirefoxDriver();
 
-            driverIE = new InternetExplorerDriver();
+            //driverIE = new InternetExplorerDriver();
         }
 
         [AfterScenario]

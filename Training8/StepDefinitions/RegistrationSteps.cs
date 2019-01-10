@@ -1,10 +1,11 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using Training8.Utilities;
 
 namespace Training8.StepDefinitions
 {
     [Binding]
-    public class RegistrationSteps
+    public class RegistrationSteps : Hooks
     {
 
         [When(@"I click on register button")]
@@ -37,7 +38,7 @@ namespace Training8.StepDefinitions
         [Given(@"I navigate to the site")]
         public void GivenINavigateToTheSite()
         {
-            //ScenarioContext.Current.Pending();
+            driver.Navigate().GoToUrl("http://www.giftrete.com");
         }
         
 
