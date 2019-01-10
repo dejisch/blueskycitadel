@@ -10,4 +10,3 @@ Scenario:Login to the site
 	And I enter username
 	And I enter password
 	And I click on login button
-	#Then I am logged in to the site

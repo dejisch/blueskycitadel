@@ -6,7 +6,7 @@ using Training8.Utilities;
 namespace Training8.StepDefinitions
 {
     [Binding]
-    public class LoginSteps : Hooks
+    public class LoginSteps
     {
         LoginPage loginPage;
 

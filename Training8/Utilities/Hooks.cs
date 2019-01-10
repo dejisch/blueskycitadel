@@ -12,7 +12,7 @@ namespace Training8.Utilities
     [Binding]
     public class Hooks
     {
-        public ChromeDriver driver;
+        public static ChromeDriver driver;
         public FirefoxDriver driverFirefox;
         public InternetExplorerDriver driverIE;
 
