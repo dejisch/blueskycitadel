@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using TechTalk.SpecFlow;
 using Training8.PageObjects;
 using Training8.Utilities;
@@ -39,11 +40,24 @@ namespace Training8.StepDefinitions
         {
             loginPage.ClickSignin();
         }
-        
+
+        [Then(@"I am not logged in to the site")]
+        public void ThenIAmNotLoggedInToTheSite()
+        {
+            loginPage.IsloginErrorMsgDisplayed();
+            
+        }
+
+
         [Then(@"I am logged in to the site")]
         public void ThenIAmLoggedInToTheSite()
         {
-            ScenarioContext.Current.Pending();
+            //verify that you are logged
+            //pageobject - create an element
+            //pageobject - create a method to confirm if the element is visible
+            // on the step definition - You call the method
+
+
         }
     }
 }

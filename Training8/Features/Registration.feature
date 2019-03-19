@@ -16,3 +16,5 @@ Scenario: Registration of users
 	And I am on the registration page
 	And I fill the form
 	Then I am registered
+
+

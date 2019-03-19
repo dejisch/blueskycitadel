@@ -15,6 +15,9 @@ namespace Training8.PageObjects
         [FindsBy(How = How.LinkText, Using = "Login")]
         private IWebElement login;
 
+        [FindsBy(How = How.XPath, Using = "//*[@id='login-form']/div[1]")]
+        private IWebElement loginErrorMsg;
+
         [FindsBy(How = How.Id, Using = "email")]
         private IWebElement emailElement;
 
@@ -28,6 +31,11 @@ namespace Training8.PageObjects
         {
 
             PageFactory.InitElements(Hooks.driver, this);
+        }
+
+        public bool IsloginErrorMsgDisplayed()
+        {
+            return loginErrorMsg.Displayed;
         }
 
         public void ClickSignin()
